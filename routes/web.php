@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\CategoriesController;
+// Authantigation
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +31,7 @@ Route::get('/shorts-cargo', [CategoriesController::class, 'shorts_cargo']);
 Route::get('/sweaters', [CategoriesController::class, 'sweaters']);
 Route::get('/tank-top', [CategoriesController::class, 'tank_top']);
 Route::get('/t-shirts', [CategoriesController::class, 't_shirts']);
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
