@@ -71,39 +71,39 @@
                     <a class="nav-link dropdown-toggle-mob" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category <i class="icofont-rounded-down"></i></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a style="background-color:#01d514; color: white" class="dropdown-item" href="fleece-hoodies.php">Fleece Hoodies</a>
+                        <a style="background-color:#01d514; color: white" class="dropdown-item" href="/fleece-hoodies">Fleece Hoodies</a>
                       </li>
 
                       <li>
-                        <a style="background-color:#6e71e0; color: white" class="dropdown-item" href="jeans.php">Jeans</a>
+                        <a style="background-color:#6e71e0; color: white" class="dropdown-item" href="/jeans">Jeans</a>
                       </li>
 
                       <li>
-                        <a style="background-color:#ff1b0e; color: white" class="dropdown-item" href="leggings.php">Leggings</a>
+                        <a style="background-color:#ff1b0e; color: white" class="dropdown-item" href="/leggings">Leggings</a>
                       </li>
 
                       <li>
-                        <a style="background-color:#032323; color: white" class="dropdown-item" href="polo-shirts.php">Polo Shirts</a>
+                        <a style="background-color:#032323; color: white" class="dropdown-item" href="/polo-shirts">Polo Shirts</a>
                       </li>
 
                       <li>
-                        <a style="background-color:#b777ae; color: white" class="dropdown-item" href="shorts-capri.php">Shorts & Capri</a>
+                        <a style="background-color:#b777ae; color: white" class="dropdown-item" href="/shorts-capri">Shorts & Capri</a>
                       </li>
 
                       <li>
-                        <a style="background-color:#a0125e; color: white" class="dropdown-item" href="shorts-cargo.php">Shorts & Cargo</a>
+                        <a style="background-color:#a0125e; color: white" class="dropdown-item" href="/shorts-cargo">Shorts & Cargo</a>
                       </li>
 
                       <li>
-                        <a style="background-color:#b59284; color: white" class="dropdown-item" href="sweaters.php">Sweaters</a>
+                        <a style="background-color:#b59284; color: white" class="dropdown-item" href="/sweaters">Sweaters</a>
                       </li>
 
                       <li>
-                        <a style="background-color:#0cfff9; color: white" class="dropdown-item" href="tank-top.php">Tank Top</a>
+                        <a style="background-color:#0cfff9; color: white" class="dropdown-item" href="/tank-top">Tank Top</a>
                       </li>
 
                       <li>
-                        <a style="background-color:#0e6bc0; color: white" class="dropdown-item" href="t-shirts.php">T-Shirts</a>
+                        <a style="background-color:#0e6bc0; color: white" class="dropdown-item" href="/t-shirts">T-Shirts</a>
                       </li>
                       
                     </ul>
