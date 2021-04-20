@@ -15,7 +15,7 @@ class CreateHandiCraftsTable extends Migration
     {
         Schema::create('handi_crafts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('title');
             $table->string('image');
             $table->timestamps();
         });

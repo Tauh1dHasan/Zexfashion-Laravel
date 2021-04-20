@@ -13,19 +13,38 @@
                            <a href="/zexadmin" class="btn btn-primary float-right">Go Back</a>
                         </div>
 
-                        <form>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Craft Name*</label>
-                            <input type="text" class="form-control" placeholder="Enter Your Crafr Name">
+                        <div class="row justify-content-center">
+                          <div class="col-md-3"></div>
+
+                          <div class="col-md-6">
+
+
+
+                            <form action="/handi-craft/store" method="POST" enctype="multipart/form-data" style="padding-bottom: 25px">
+                                @csrf
+
+                              <div class="form-group">
+                                <label>Craft Name*</label>
+                                <input type="text" class="form-control" placeholder="Enter Your Crafr Name" name="title" required="">
+                              </div>
+
+                              <div class="form-group">
+                                <label>Upload your Image</label>
+                                <input name="Image" type="file" class="form-control-file" required="">
+                              </div>
+
+                              <input type="submit" name="submit" value="Submit" class="btn btn-success">
+
+                            </form>
+
+
+
+
+
                           </div>
 
-                          <div class="form-group">
-                            <label for="exampleFormControlFile1">Upload your Image</label>
-                            <input type="file" class="form-control-file">
-                          </div>
-
-                          <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                          <div class="col-md-3"></div>
+                        </div>
 
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 @extends('layout.app')
-	@section()
+	@section('content')
 
 		<!-- Page Breadcrumbs Start -->
   <div class="slider bg-navy-blue bg-scroll pos-rel breadcrumbs-page">
     <div class="container">
-      <h1 align="center">Jeans Gallery</h1>
+      <h1 align="center">Handi Crafts</h1>
     </div>
   </div>
   <!-- Page Breadcrumbs End -->

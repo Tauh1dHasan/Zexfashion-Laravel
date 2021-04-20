@@ -14,6 +14,7 @@ class HandiCraftController extends Controller
      */
     public function index()
     {
+        // showing Handi Craft items in front-end
         return view('handiCraft.handi_craft');
     }
 
@@ -24,6 +25,7 @@ class HandiCraftController extends Controller
      */
     public function create()
     {
+        // Showing handi craft item upload form
         return view('handiCraft.create');
     }
 
@@ -35,42 +37,27 @@ class HandiCraftController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Getting data from user input
+        $title = $request->input('title');
+        $image = $request->file('Image')->getClientOriginalName();
+        // uploading image to file system
+        $request->file('Image')->store('public/crafts/');
+
+        // Sroting into database
+        $binding = new HandiCraft;
+        // Getting form input data
+        $binding->title = $title;
+        $binding->image = $image;
+        
+        // saving form data
+        $binding->save();
+        
+
+        return redirect('/zexadmin')->with('Uploaded', 'Item uploaded.');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\HandiCraft  $handiCraft
-     * @return \Illuminate\Http\Response
-     */
-    public function show(HandiCraft $handiCraft)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\HandiCraft  $handiCraft
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(HandiCraft $handiCraft)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\HandiCraft  $handiCraft
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, HandiCraft $handiCraft)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.

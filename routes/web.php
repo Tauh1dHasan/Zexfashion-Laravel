@@ -49,7 +49,8 @@ Route::get('/tank-top', [CategoriesController::class, 'tank_top']);
 Route::get('/t-shirts', [CategoriesController::class, 't_shirts']);
 
 Route::get('/handi-craft', [HandiCraftController::class, 'index']);
-Route::get('/handi-craft/create', [HandiCraftController::class, 'create']);
+Route::get('/handi-craft/create', [HandiCraftController::class, 'create'])->middleware('auth');
+Route::post('/handi-craft/store', [HandiCraftController::class, 'store'])->middleware('auth');
 
 
 
