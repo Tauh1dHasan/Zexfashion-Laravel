@@ -64,11 +64,15 @@
             <div class="ml-auto pt-2">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/" style="border: 2px solid red">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/handi-craft" style="border: 2px solid red">Handi Crafts</a>
                   </li>
 
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle-mob" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category <i class="icofont-rounded-down"></i></a>
+                    <a class="nav-link dropdown-toggle-mob" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 2px solid red">Category <i class="icofont-rounded-down"></i></a>
                     <ul class="dropdown-menu">
                       <li>
                         <a style="background-color:#01d514; color: white" class="dropdown-item" href="/fleece-hoodies">Fleece Hoodies</a>
@@ -110,11 +114,11 @@
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="/about">About Us</a>
+                    <a class="nav-link" href="/about" style="border: 2px solid red">About Us</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact Us</a>
+                    <a class="nav-link" href="/contact" style="border: 2px solid red">Contact Us</a>
                   </li>
                   
               <!-- Main Navigation End -->

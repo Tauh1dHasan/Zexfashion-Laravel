@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\HandiCraftController;
 // Authantigation
 use App\Http\Controllers\HomeController;
 /*
@@ -15,6 +16,21 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Start dashboard routes
+Auth::routes();
+// Bypass registration
+Route::get('/register', function(){
+	return redirect('/login');
+});
+Route::post('/register', function(){
+	return redirect('/login');
+});
+
+Route::get('/zexadmin', [HomeController::class, 'index'])->name('zexadmin');
+// End admin panel routes
+
+
 
 // Pages controller
 Route::get('/', [PagesController::class, 'index']);
@@ -32,6 +48,8 @@ Route::get('/sweaters', [CategoriesController::class, 'sweaters']);
 Route::get('/tank-top', [CategoriesController::class, 'tank_top']);
 Route::get('/t-shirts', [CategoriesController::class, 't_shirts']);
 
-Auth::routes();
+Route::get('/handi-craft', [HandiCraftController::class, 'index']);
+Route::get('/handi-craft/create', [HandiCraftController::class, 'create']);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
