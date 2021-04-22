@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class HandiCraft extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['title', 'image'];
 }

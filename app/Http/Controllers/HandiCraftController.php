@@ -15,7 +15,8 @@ class HandiCraftController extends Controller
     public function index()
     {
         // showing Handi Craft items in front-end
-        return view('handiCraft.handi_craft');
+        $handiCrafts = HandiCraft::orderBy('id', 'desc')->get();
+        return view('handiCraft.handi_craft')->with('handiCrafts', $handiCrafts);
     }
 
     /**
@@ -37,17 +38,33 @@ class HandiCraftController extends Controller
      */
     public function store(Request $request)
     {
+        
+        // Validating image file
+        $request->validate([
+            'title' => 'required',
+            'Image' => 'required|mimes:jpg,jpeg,png'
+        ]);
+
+
+        // Giving unique name to image
+        $newImageName = time() . '-' . $request->title . '.' . $request->Image->extension();
+        // moving image file to our app
+        $request->Image->move(public_path('crafts'), $newImageName);
+        
         // Getting data from user input
         $title = $request->input('title');
-        $image = $request->file('Image')->getClientOriginalName();
-        // uploading image to file system
-        $request->file('Image')->store('public/crafts/');
+        // checking any function with dieDump (dd)
+        // dd($test);
+
+
+
+
 
         // Sroting into database
         $binding = new HandiCraft;
         // Getting form input data
         $binding->title = $title;
-        $binding->image = $image;
+        $binding->image = $newImageName;
         
         // saving form data
         $binding->save();
@@ -65,8 +82,12 @@ class HandiCraftController extends Controller
      * @param  \App\Models\HandiCraft  $handiCraft
      * @return \Illuminate\Http\Response
      */
-    public function destroy(HandiCraft $handiCraft)
+    public function destroy($id)
     {
-        //
+        $handiCraft = HandiCraft::find($id);
+        
+        $handiCraft->delete();
+
+        return redirect('/zexadmin')->with('Deleted', 'Item Deleted.');
     }
 }

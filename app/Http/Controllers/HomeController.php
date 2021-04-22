@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\HandiCraft;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $handiCrafts = HandiCraft::orderBy('id', 'desc')->get();
+        return view('home')->with('handiCrafts', $handiCrafts);
     }
 }

@@ -23,18 +23,23 @@
                           </thead>
                           <tbody>
 
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>
-                                  <form action="post">
-                                      @CSRF
-                                      <input type="submit" value="Delete" class="btn btn-danger">
-                                  </form>
-                              </td>
-                            </tr>
-                            
+                            @foreach ($handiCrafts as $handiCraft)
+                                <tr>
+                                  <th scope="row">{{ $handiCraft->id }}</th>
+                                  <td>
+                                      <img width="80px" src="{{ asset('crafts/'. $handiCraft->image) }}" alt="{{ $handiCraft->image }}">
+                                  </td>
+                                  <td>{{ $handiCraft->title }}</td>
+                                  <td>
+                                      <form action="/handi-craft/delete/{{ $handiCraft->id }}" method="POST">
+                                          @csrf
+
+                                          <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                                      </form>
+                                  </td>
+                                </tr>
+                            @endforeach
+
                           </tbody>
                         </table>
 

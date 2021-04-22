@@ -51,6 +51,7 @@ Route::get('/t-shirts', [CategoriesController::class, 't_shirts']);
 Route::get('/handi-craft', [HandiCraftController::class, 'index']);
 Route::get('/handi-craft/create', [HandiCraftController::class, 'create'])->middleware('auth');
 Route::post('/handi-craft/store', [HandiCraftController::class, 'store'])->middleware('auth');
+Route::post('/handi-craft/delete/{id}', [HandiCraftController::class, 'destroy'])->middleware('auth');
 
 
 
